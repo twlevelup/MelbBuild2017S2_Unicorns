@@ -35,6 +35,7 @@
     "address": "105 test street, dummy state, country notfound"
   },
   {
+
     "name": "Hazim Jumali",
     "phone": "+61430638672",
     "address": "105 test street, dummy state, country notfound"
@@ -47,5 +48,10 @@
     "name": "Namibia",
     "phone": "+61 025 3625 326",
     "address": "105 test street, dummy state, country notfound"
+  },
+  {
+    "name": "Davis Hong",
+    "phone": "+61 0401 234 567",
+    "address": "101 test street"
   }
 ]

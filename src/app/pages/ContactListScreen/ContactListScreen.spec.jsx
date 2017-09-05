@@ -46,9 +46,12 @@ describe('ContactListScreen component', () => {
     ContactScreenButtons.BOTTOM();
     expect(ButtonAction.goToPage).toHaveBeenCalled();
   });
-
   it('should contain Contact 1', () => {
     const wrapper = render(<ContactListScreen contacts={ contacts } />);
     expect(wrapper.text()).toContain('Contact 1');
+  });
+  it('should contain Varun', () => {
+    const wrapper = render(<ContactListScreen contacts={ contacts } />);
+    expect(wrapper.text()).toContain('Varun');
   });
 });

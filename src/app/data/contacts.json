@@ -23,5 +23,10 @@
     "name": "Contact 5",
     "phone": "+61 025 3625 3265",
     "address": "105 test street, dummy state, country notfound"
+  },
+  {
+    "name": "Varun",
+    "phone": "+61 025 3625 3265",
+    "address": "105 test street, dummy state, country notfound"
   }
 ]

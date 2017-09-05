@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import { ContactListScreen, ContactScreenButtons } from './ContactListScreen';
 import ButtonAction from '../../../framework/util/ButtonAction';
 import contacts from '../../data/contacts.json';
@@ -45,5 +45,10 @@ describe('ContactListScreen component', () => {
   it('should have a BOTTOM button config of scrolling down', () => {
     ContactScreenButtons.BOTTOM();
     expect(ButtonAction.goToPage).toHaveBeenCalled();
+  });
+
+  it('should contain Contact 1', () => {
+    const wrapper = render(<ContactListScreen contacts={ contacts } />);
+    expect(wrapper.text()).toContain('Contact 1');
   });
 });

@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { ContactListScreen, ContactScreenButtons } from './ContactListScreen';
 import ButtonAction from '../../../framework/util/ButtonAction';
+import contacts from '../../data/contacts.json';
 
 jest.mock('../../../framework/util/ButtonAction');
 
@@ -10,7 +11,7 @@ describe('ContactListScreen component', () => {
   beforeEach(() => {
     jest.spyOn(ButtonAction, 'goToPage');
     componentWrapper = shallow(
-      <ContactListScreen contacts={ [] } />
+      <ContactListScreen contacts={ contacts } />
     );
   });
 

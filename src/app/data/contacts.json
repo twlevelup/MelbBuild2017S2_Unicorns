@@ -38,5 +38,14 @@
     "name": "Hazim Jumali",
     "phone": "+61430638672",
     "address": "105 test street, dummy state, country notfound"
+  }, {
+    "name": "Fibby",
+    "phone": "+61 025 3625 326",
+    "address": "105 test street, dummy state, country notfound"
+  },
+  {
+    "name": "Namibia",
+    "phone": "+61 025 3625 326",
+    "address": "105 test street, dummy state, country notfound"
   }
 ]

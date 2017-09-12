@@ -54,4 +54,8 @@ describe('ContactListScreen component', () => {
     const wrapper = render(<ContactListScreen contacts={ contacts } />);
     expect(wrapper.text()).toContain('Varun');
   });
+  it('should contain Jeff', () => {
+    const wrapper = render(<ContactListScreen contacts={ contacts } />);
+    expect(wrapper.text()).toContain('Jeff');
+  });
 });

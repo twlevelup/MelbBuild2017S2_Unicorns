@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { NewsScreenComponent, NewsScreenButtons } from './JobPostScreen';
+import { JobPostScreenComponent, JobPostScreenButtons } from './JobPostScreen';
 import ButtonAction from '../../../framework/util/ButtonAction';
 
 jest.mock('../../../framework/util/ButtonAction');

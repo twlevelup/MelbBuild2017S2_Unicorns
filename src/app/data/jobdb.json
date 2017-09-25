@@ -1,12 +1,11 @@
 [
   {
-    "JobId":"",
-    "Title":"",
-    "Department":"",
-    "Company":"",
-    "Tags":[],
-    "Description":"",
-    "Salary":0,
-
+    "JobId": "1",
+    "Title": "Junior Web Developer",
+    "Department": "Department1",
+    "Company": "Company1",
+    "Tags": ["Junior", "Web", "Developer", "IT"],
+    "Description": "",
+    "Salary": 50000
   }
 ]

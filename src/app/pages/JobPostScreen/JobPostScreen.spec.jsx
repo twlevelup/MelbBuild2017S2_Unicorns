@@ -27,9 +27,9 @@ describe('<JobPostScreenComponent />', () => {
       expect(ButtonAction.goToPage).toHaveBeenCalledWith('/');
     });
 
-    test('it should have a RIGHT button config of going to contactList page', () => {
+    test('it should have a RIGHT button config of going to Job Detail page', () => {
       JobPostScreenButtons.RIGHT();
-      expect(ButtonAction.goToPage).toHaveBeenCalledWith('/contacts');
+      expect(ButtonAction.goToPage).toHaveBeenCalledWith('/job_detail');
     });
 
     test('it should have a TOP button config of going to contactList page', () => {

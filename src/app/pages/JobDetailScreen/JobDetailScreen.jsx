@@ -33,7 +33,7 @@ JobDetailScreen.propTypes = {
 };
 
 export const JobDetailScreenButtons = {
-  LEFT: () => ButtonAction.goToPage('/'),
+  LEFT: () => ButtonAction.goToPage('/jobpost'),
   RIGHT: () => ButtonAction.goToPage('/counter'),
   TOP: () => ButtonAction.scrollUp(),
   BOTTOM: () => ButtonAction.scrollDown(),

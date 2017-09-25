@@ -27,9 +27,9 @@ describe('JobDetailScreen component', () => {
     expect(componentWrapper.find('GenericList')).toBePresent();
   });
 
-  it('should have a LEFT button config of going to Home Page', () => {
+  it('should have a LEFT button config of going to Job List Page', () => {
     JobDetailScreenButtons.LEFT();
-    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/');
+    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/jobpost');
   });
 
   it('should have a RIGHT button config of going to Counter page', () => {

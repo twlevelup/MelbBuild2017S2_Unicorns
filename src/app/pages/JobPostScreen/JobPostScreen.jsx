@@ -17,7 +17,7 @@ export const JobPostScreenComponent = () => {
 
 export const JobPostScreenButtons = {
   LEFT: () => ButtonAction.goToPage('/'),
-  RIGHT: () => ButtonAction.goToPage('/contacts'),
+  RIGHT: () => ButtonAction.goToPage('/job_detail'),
   TOP: () => ButtonAction.scrollUp(),
   BOTTOM: () => ButtonAction.scrollDown(),
 };

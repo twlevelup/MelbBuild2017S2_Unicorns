@@ -2,10 +2,64 @@
   {
     "JobId": "1",
     "Title": "Junior Web Developer",
+    "Department": "Software",
+    "Company": "ThoughtWorks",
+    "Tags": ["Junior", "Web", "Developer", "IT", "React"],
+    "Description": "",
+    "Salary": 70000
+  },
+  {
+    "JobId": "2",
+    "Title": "Backend Developer",
+    "Department": "Digital Team",
+    "Company": "web company Y",
+    "Tags": ["Junior", "Web", "Developer", "IT"],
+    "Description": "",
+    "Salary": 60000
+  },
+  {
+    "JobId": "3",
+    "Title": "Frontend Developer",
+    "Department": "IT",
+    "Company": "Software Company X",
+    "Tags": ["Junior", "Web", "Developer", "IT"],
+    "Description": "",
+    "Salary": 50000
+  },
+  {
+    "JobId": "4",
+    "Title": "Senior Full Stack Developer",
+    "Department": "Management Team",
+    "Company": "IT Company Z",
+    "Tags": ["Junior", "Web", "Developer", "IT"],
+    "Description": "",
+    "Salary": 100000
+  },
+  {
+    "JobId": "5",
+    "Title": "Junior Web Developer",
     "Department": "Department1",
     "Company": "Company1",
     "Tags": ["Junior", "Web", "Developer", "IT"],
     "Description": "",
     "Salary": 50000
-  }
+  },
+  {
+    "JobId": "6",
+    "Title": "Junior Web Developer",
+    "Department": "Department1",
+    "Company": "Company1",
+    "Tags": ["Junior", "Web", "Developer", "IT"],
+    "Description": "",
+    "Salary": 50000
+  },
+  {
+    "JobId": "7",
+    "Title": "Junior Web Developer",
+    "Department": "Department1",
+    "Company": "Company1",
+    "Tags": ["Junior", "Web", "Developer", "IT"],
+    "Description": "",
+    "Salary": 50000
+  },
 ]

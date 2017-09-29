@@ -34,12 +34,12 @@ describe('Job', () => {
     ];
     jobs.forEach((job) => {
       const component = composeComponent(job);
-      expect(component.find('.JobId').text()).toEqual(`Job ID: ${ job.JobId }`);
-      expect(component.find('.Title').text()).toEqual(`Job Title: ${ job.Title }`);
-      expect(component.find('.Department').text()).toEqual(`Department: ${ job.Department }`);
-      expect(component.find('.Company').text()).toEqual(`Company: ${ job.Company }`);
-      expect(component.find('.Description').text()).toEqual(`Description: ${ job.Description }`);
-      expect(component.find('.Salary').text()).toEqual(`Salary: ${ job.Salary }`);
+      expect(component.find('.JobId').text()).toEqual(`ID: ${ job.JobId }`);
+      expect(component.find('.title').text()).toEqual(`${ job.Title }`);
+      expect(component.find('.Department').text()).toEqual(`Department${ job.Department }`);
+      expect(component.find('.Company').text()).toEqual(`Company${ job.Company }`);
+      expect(component.find('.Description').text()).toEqual(`Description${ job.Description }`);
+      expect(component.find('.Salary').text()).toEqual(`Salary${ job.Salary }`);
     });
   });
 

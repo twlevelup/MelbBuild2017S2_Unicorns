@@ -13,23 +13,21 @@ const Job = (props) => {
 
   return (
     <div className='job'>
+      <h2 className='title'>{Title}</h2>
       <div className='JobId'>
-        <b>Job ID</b>: {JobId}
-      </div>
-      <div className='Title'>
-        <b>Job Title</b>: {Title}
+        <b>ID</b>: {JobId}
       </div>
       <div className='Company'>
-        <b>Company</b>: {Company}
+        <div className='jobTitles'>Company</div>{Company}
       </div>
       <div className='Department'>
-        <b>Department</b>: {Department}
+        <div className='jobTitles'>Department</div>{Department}
       </div>
       <div className='Description'>
-        <b>Description</b>: {Description}
+        <div className='jobTitles'>Description</div>{Description}
       </div>
       <div className='Salary'>
-        <b>Salary</b>: {Salary}
+        <div className='jobTitles'>Salary</div>{Salary}
       </div>
       <br />
     </div>

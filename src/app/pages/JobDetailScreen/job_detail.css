@@ -6,3 +6,26 @@
   padding-bottom: 5px;
 
 }
+
+.title {
+  color: orange;
+}
+
+.job {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.JobId {
+  font-size: 11px;
+  margin-top: -5px;
+  padding-bottom: 5px;
+}
+
+.jobTitles {
+  padding-top: 3px;
+  color: #ffb733;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14px;
+}

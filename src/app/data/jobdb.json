@@ -5,7 +5,7 @@
     "Department": "Software",
     "Company": "ThoughtWorks",
     "Tags": ["Junior", "Web", "Developer", "IT", "React"],
-    "Description": "",
+    "Description": "This job requires .Net and MySQL experience.",
     "Salary": 70000
   },
   {
@@ -14,7 +14,7 @@
     "Department": "Digital Team",
     "Company": "web company Y",
     "Tags": ["Junior", "Web", "Developer", "IT"],
-    "Description": "",
+    "Description": "We offer great working environment here.",
     "Salary": 60000
   },
   {
@@ -22,8 +22,8 @@
     "Title": "Frontend Developer",
     "Department": "IT",
     "Company": "Software Company X",
-    "Tags": ["Junior", "Web", "Developer", "IT"],
-    "Description": "",
+    "Tags": ["Junior", "Frontend", "Developer", "IT"],
+    "Description": "At leat one-year experience required.",
     "Salary": 50000
   },
   {
@@ -31,8 +31,8 @@
     "Title": "Senior Full Stack Developer",
     "Department": "Management Team",
     "Company": "IT Company Z",
-    "Tags": ["Junior", "Web", "Developer", "IT"],
-    "Description": "",
+    "Tags": ["Senior", "Web", "Developer", "IT"],
+    "Description": "Leadership is required.",
     "Salary": 100000
   },
   {
@@ -41,7 +41,7 @@
     "Department": "Department1",
     "Company": "Company1",
     "Tags": ["Junior", "Web", "Developer", "IT"],
-    "Description": "",
+    "Description": "We need you to be on board as soon as possible.",
     "Salary": 50000
   },
   {
@@ -50,7 +50,7 @@
     "Department": "Department1",
     "Company": "Company1",
     "Tags": ["Junior", "Web", "Developer", "IT"],
-    "Description": "",
+    "Description": "Casual position.",
     "Salary": 50000
   },
   {
@@ -59,7 +59,7 @@
     "Department": "Department1",
     "Company": "Company1",
     "Tags": ["Junior", "Web", "Developer", "IT"],
-    "Description": "",
+    "Description": "Fulltime/Part-time",
     "Salary": 50000
   }
 ]

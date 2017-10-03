@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { JobPostScreenComponent, JobPostScreenButtons } from './JobPostScreen';
 import ButtonAction from '../../../framework/util/ButtonAction';
+import jobs from '../../data/jobdb.json';
 
 jest.mock('../../../framework/util/ButtonAction');
 
@@ -9,16 +10,16 @@ describe('<JobPostScreenComponent />', () => {
   let componentWrapper;
 
   beforeEach(() => {
-    componentWrapper = shallow(<JobPostScreenComponent />);
+    componentWrapper = shallow(<JobPostScreenComponent jobs={ jobs }/>);
     jest.spyOn(ButtonAction, 'goToPage');
   });
 
   it('should display the Job Title', () => {
-    expect(componentWrapper.find('#job-title')).toHaveText('Job Title');
+    expect(componentWrapper.find('#job-title')).toHaveText(jobs[0].Title);
   });
 
   it('should display mathcing job tags', () => {
-    expect(componentWrapper.find('#job-tags')).toIncludeText('Matching tags:');
+    expect(componentWrapper.find('#job-tags')).toIncludeText(jobs[0].Tags.join(', '));
   });
 
   describe('NewsScreenButtons', () => {
@@ -40,6 +41,11 @@ describe('<JobPostScreenComponent />', () => {
     test('it should have a BOTTOM button config of going to contactList page', () => {
       JobPostScreenButtons.BOTTOM();
       expect(ButtonAction.scrollDown).toHaveBeenCalled();
+    });
+
+    test('it should have a SCREEN button config of going to Jobs Details page', () => {
+      JobPostScreenButtons.SCREEN();
+      expect(ButtonAction.goToPage).toHaveBeenCalledWith('/job_detail');
     });
   });
 });

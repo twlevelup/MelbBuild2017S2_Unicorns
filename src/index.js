@@ -16,7 +16,7 @@ const pages = [
   { path: '/contacts', Component: ContactScreen, props: { contacts } },
   { path: '/counter', Component: CounterScreen },
   { path: '/notfound', Component: NotFoundScreen },
-  { path: '/jobpost', Component: JobPostScreen },
+  { path: '/jobpost', Component: JobPostScreen, props: { jobs } },
   { path: '/job_detail', Component: JobInfoScreen, props: { jobs } },
 ];
 

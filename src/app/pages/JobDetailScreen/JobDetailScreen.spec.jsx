@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { JobDetailScreen, JobDetailScreenButtons } from './JobDetailScreen';
 import ButtonAction from '../../../framework/util/ButtonAction';
-import jobs from '../../data/jobdb.json';
 
 jest.mock('../../../framework/util/ButtonAction');
 
@@ -11,7 +10,7 @@ describe('JobDetailScreen component', () => {
   beforeEach(() => {
     jest.spyOn(ButtonAction, 'goToPage');
     componentWrapper = shallow(
-      <JobDetailScreen jobs={ jobs } />
+      <JobDetailScreen />
     );
   });
 

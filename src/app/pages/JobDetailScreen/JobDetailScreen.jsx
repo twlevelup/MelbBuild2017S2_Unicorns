@@ -1,57 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
-  string,
-  arrayOf,
-  shape,
+  number,
 } from 'prop-types';
-
+import jobs from '../../data/jobdb.json';
 import WithButtonConfigs from '../../../framework/containers/WithButtonConfigs';
 import ButtonAction from '../../../framework/util/ButtonAction';
 import Job from './components/Job/Job';
 import './job_detail.css';
 
-export const JobDetailScreen = ({ jobs }) => {
-  // console.log('Hello!!!!');
-  // console.log(jobId);
-  // const i = parseInt(jobId, 10);
-  // console.log(i);
-  // if (!isNaN(i) && i < jobs.length) {
-    // return (
-      // <div id='contact-screen' className='job-screen'>
-        // <Job
-          // className='job-list'
-          // JobId={ jobs[i - 1].JobId }
-          // Title={ jobs[i - 1].Title }
-          // Department={ jobs[i - 1].Department }
-          // Company={ jobs[i - 1].Company }
-          // Description={ jobs[i - 1].Description }
-          // Salary={ jobs[i - 1].Salary }
-        // />
-      // </div>
-    // );
-  // }
-  return (
-    <div id='contact-screen' className='job-screen'>
-      <Job
-        className='job-list'
-        JobId={ jobs[0].JobId }
-        Title={ jobs[0].Title }
-        Department={ jobs[0].Department }
-        Company={ jobs[0].Company }
-        Description={ jobs[0].Description }
-        Salary={ jobs[0].Salary }
-      />
-    </div>
-  );
-};
+export class JobDetailScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { jobId: props.jobId };
+  }
+
+  render() {
+    return (
+      <div id='contact-screen' className='job-screen'>
+        <Job
+          className='job-list'
+          JobId={ jobs[this.state.jobId - 1].JobId }
+          Title={ jobs[this.state.jobId - 1].Title }
+          Department={ jobs[this.state.jobId - 1].Department }
+          Company={ jobs[this.state.jobId - 1].Company }
+          Description={ jobs[this.state.jobId - 1].Description }
+          Salary={ jobs[this.state.jobId - 1].Salary }
+        />
+      </div>
+    );
+  }
+}
 
 JobDetailScreen.propTypes = {
-  jobs: arrayOf(shape({
-    JobId: string,
-    Title: string,
-    Company: string,
-  })).isRequired,
-  // jobId: string.isRequired,
+  jobId: number,
+};
+
+JobDetailScreen.defaultProps = {
+  jobId: 1,
 };
 
 export const JobDetailScreenButtons = {

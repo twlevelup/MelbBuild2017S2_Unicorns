@@ -7,9 +7,9 @@ import ContactScreen from './app/pages/ContactListScreen/ContactListScreen';
 import NotFoundScreen from './app/pages/NotFoundScreen/NotFoundScreen';
 import JobInfoScreen from './app/pages/JobDetailScreen/JobDetailScreen';
 import contacts from './app/data/contacts.json';
-import jobs from './app/data/jobdb.json';
 import WatchApp from './framework';
 import JobPostScreen from './app/pages/JobPostScreen/JobPostScreen';
+import jobs from './app/data/jobdb.json';
 
 const pages = [
   { path: '/', Component: HomeScreen },
@@ -17,7 +17,7 @@ const pages = [
   { path: '/counter', Component: CounterScreen },
   { path: '/notfound', Component: NotFoundScreen },
   { path: '/jobpost', Component: JobPostScreen, props: { jobs } },
-  { path: '/job_detail', Component: JobInfoScreen, props: { jobs } },
+  { path: '/job_detail', Component: JobInfoScreen },
 ];
 
 ReactDOM.render(

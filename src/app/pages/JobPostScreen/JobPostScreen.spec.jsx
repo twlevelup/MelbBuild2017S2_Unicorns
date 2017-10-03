@@ -10,7 +10,7 @@ describe('<JobPostScreenComponent />', () => {
   let componentWrapper;
 
   beforeEach(() => {
-    componentWrapper = shallow(<JobPostScreenComponent jobs={ jobs }/>);
+    componentWrapper = shallow(<JobPostScreenComponent jobs={ jobs } />);
     jest.spyOn(ButtonAction, 'goToPage');
   });
 
@@ -30,7 +30,7 @@ describe('<JobPostScreenComponent />', () => {
 
     test('it should have a RIGHT button config of going to Job Detail page', () => {
       JobPostScreenButtons.RIGHT();
-      expect(ButtonAction.goToPage).toHaveBeenCalledWith('/job_detail');
+      expect(ButtonAction.goToPage).toHaveBeenCalledWith({ pathname: '/job_detail', state: { jobId: 5 } });
     });
 
     test('it should have a TOP button config of going to contactList page', () => {

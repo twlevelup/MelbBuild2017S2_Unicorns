@@ -32,7 +32,7 @@ JobPostScreenComponent.propTypes = {
 
 export const JobPostScreenButtons = {
   LEFT: () => ButtonAction.goToPage('/'),
-  RIGHT: () => ButtonAction.goToPage('/job_detail'),
+  RIGHT: () => ButtonAction.goToPage({ pathname: '/job_detail', state: { jobId: 5 } }),
   TOP: () => ButtonAction.scrollUp(),
   BOTTOM: () => ButtonAction.scrollDown(),
   SCREEN: () => ButtonAction.goToPage('/job_detail'),

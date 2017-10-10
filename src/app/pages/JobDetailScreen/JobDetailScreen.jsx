@@ -3,6 +3,7 @@ import {
   number,
 } from 'prop-types';
 import jobs from '../../data/jobdb.json';
+// import savedJobs from '../../data/savedjobdb.json';
 import WithButtonConfigs from '../../../framework/containers/WithButtonConfigs';
 import ButtonAction from '../../../framework/util/ButtonAction';
 import Job from './components/Job/Job';
@@ -42,6 +43,7 @@ JobDetailScreen.defaultProps = {
 export const JobDetailScreenButtons = {
   LEFT: () => ButtonAction.goToPage('/jobpost'),
   RIGHT: () => ButtonAction.goToPage('/counter'),
+  // RIGHT: () => ButtonAction.goToPage('/counter'),
   TOP: () => ButtonAction.scrollUp(),
   BOTTOM: () => ButtonAction.scrollDown(),
 };

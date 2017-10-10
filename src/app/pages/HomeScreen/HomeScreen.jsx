@@ -13,9 +13,16 @@ export const HomeScreenComponent = ({ userdb }) => {
     <div id='watch-home-page'>
 
       <div id='home-page-content'>
-        <img src='../../../app/pages/HomeScreen/profile.png' alt='User Profile' style={ { width: '100px' } } />
+        <img src='../../../app/pages/HomeScreen/profile.png' alt='User Profile' style={ { width: '50px' } } />
         <h2>{userdb[0].Name}</h2>
-
+        <p>Tags:
+          {userdb[0].Tags.join(', ') }
+        </p>
+        <div className='progress'>
+          <div className='progress-bar progress-bar-success' style={ { width: '35%' } } />
+          <div className='progress-bar progress-bar-warning' style={ { width: '20%' } } />
+          <div className='progress-bar progress-bar-danger' style={ { width: '10%' } } />
+        </div>
       </div>
     </div>
   );

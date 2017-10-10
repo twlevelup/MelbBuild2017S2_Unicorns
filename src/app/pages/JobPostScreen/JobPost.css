@@ -1,6 +1,7 @@
 #job-title, #job-tags {
   text-align: center;
 }
+<<<<<<< HEAD
 
 #home-btn {
   text-align: center;
@@ -33,3 +34,5 @@
   font-size: 30px;
   color: orange;
 }
+=======
+>>>>>>> add tags and progress bar on home screen

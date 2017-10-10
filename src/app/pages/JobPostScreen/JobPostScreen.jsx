@@ -36,15 +36,6 @@ export class JobPostScreenComponent extends Component {
             <p id='job-tags'>Matching tags: { jobs[this.state.jobId - 1].Tags.join(', ') }</p>
           </div>
         </div>
-        <div id='next-btn'>
-          Next
-        </div>
-        <div id='previous-btn'>
-          Previous
-        </div>
-        <div id='home-btn'>
-          HOME
-        </div>
       </div>
     );
   }

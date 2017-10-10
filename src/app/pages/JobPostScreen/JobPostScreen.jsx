@@ -1,41 +1,53 @@
-import React from 'react';
-import {
-  string,
-  arrayOf,
-  shape,
-} from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import WithButtonConfigs from '../../../framework/containers/WithButtonConfigs';
 import ButtonAction from '../../../framework/util/ButtonAction';
+import jobs from '../../data/jobdb.json';
 import './JobPost.css';
 
-export const JobPostScreenComponent = ({ jobs }) => {
-  return (
-    <div id='Job Post'>
-      <div id='job-posts-container'>
-        <div>
-          <h1 id='job-title'>{ jobs[0].Title }</h1>
-          <p id='job-tags'>Matching tags: { jobs[0].Tags.join(', ') }</p>
+export class JobPostScreenComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { jobId: props.jobId };
+  }
+
+  componentDidMount() {
+    this.props.remapButtons(this.buttonActions);
+  }
+
+  componentDidUpdate() {
+    this.props.remapButtons(this.buttonActions);
+  }
+
+  buttonActions = {
+    LEFT: () => this.setState({ jobId: this.state.jobId - 1 }),
+    RIGHT: () => this.setState({ jobId: this.state.jobId + 1 }),
+    SCREEN: () => ButtonAction.goToPage({ pathname: '/job_detail', state: { jobId: this.state.jobId } }),
+    BOTTOM: () => ButtonAction.goToPage('/'),
+  };
+
+  render() {
+    return (
+      <div id='Job Post'>
+        <div id='job-posts-container'>
+          <div>
+            <h1 id='job-title'>{ jobs[this.state.jobId - 1].Title }</h1>
+            <p id='job-tags'>Matching tags: { jobs[this.state.jobId - 1].Tags.join(', ') }</p>
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 JobPostScreenComponent.propTypes = {
-  jobs: arrayOf(shape({
-    Title: string,
-    Tags: arrayOf(string),
-  })).isRequired,
-  // jobId: string.isRequired,
+  remapButtons: PropTypes.func.isRequired,
+  jobId: PropTypes.number,
 };
 
-export const JobPostScreenButtons = {
-  LEFT: () => ButtonAction.goToPage('/'),
-  RIGHT: () => ButtonAction.goToPage({ pathname: '/job_detail', state: { jobId: 5 } }),
-  TOP: () => ButtonAction.scrollUp(),
-  BOTTOM: () => ButtonAction.scrollDown(),
-  SCREEN: () => ButtonAction.goToPage('/job_detail'),
+JobPostScreenComponent.defaultProps = {
+  jobId: 2,
 };
 
-export default WithButtonConfigs(JobPostScreenComponent, JobPostScreenButtons);
+export default WithButtonConfigs(JobPostScreenComponent);

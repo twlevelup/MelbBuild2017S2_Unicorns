@@ -1,3 +1,31 @@
 #job-title, #job-tags {
   text-align: center;
 }
+
+#home-btn {
+  text-align: center;
+  padding-top: 23%;
+  color: orange;
+}
+
+#next-btn {
+  position: absolute;
+  padding: 75% 0 0 95%;
+  transform: rotate(-90deg);
+  float: left;
+  color: orange;
+}
+
+#previous-btn {
+  position: absolute;
+  margin-top: -18%;
+  transform: rotate(90deg);
+  /*float: left;*/
+  color: orange;
+  transform-origin: left top 0;
+
+}
+
+#job-tags {
+  padding-right: 5px;
+}

@@ -5,7 +5,7 @@
 #home-btn {
   text-align: center;
   padding-top: 23%;
-  color: orange;
+  color: blue;
 }
 
 #next-btn {
@@ -13,19 +13,23 @@
   padding: 75% 0 0 95%;
   transform: rotate(-90deg);
   float: left;
-  color: orange;
+  color: blue;
 }
 
 #previous-btn {
   position: absolute;
   margin-top: -18%;
   transform: rotate(90deg);
-  /*float: left;*/
-  color: orange;
+  color: blue;
   transform-origin: left top 0;
 
 }
 
 #job-tags {
   padding-right: 5px;
+}
+
+#job-title {
+  font-size: 30px;
+  color: orange;
 }

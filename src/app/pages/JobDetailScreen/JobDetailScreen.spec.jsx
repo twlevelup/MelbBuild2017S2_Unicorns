@@ -1,21 +1,18 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { JobDetailScreen, JobDetailScreenButtons } from './JobDetailScreen';
+import { mount } from 'enzyme';
+import { JobDetailScreen } from './JobDetailScreen';
 import ButtonAction from '../../../framework/util/ButtonAction';
 
 jest.mock('../../../framework/util/ButtonAction');
 
 describe('JobDetailScreen component', () => {
   let componentWrapper;
-  beforeEach(() => {
-    jest.spyOn(ButtonAction, 'goToPage');
-    componentWrapper = shallow(
-      <JobDetailScreen />
-    );
-  });
+  let onLoadRemapButtons;
 
-  it('should have class[job-screen]', () => {
-    expect(componentWrapper).toHaveClassName('job-screen');
+  beforeEach(() => {
+    onLoadRemapButtons = jest.fn();
+    componentWrapper = mount(<JobDetailScreen remapButtons={ onLoadRemapButtons } />);
+    jest.spyOn(ButtonAction, 'goToPage');
   });
 
   it('should contain a Job component', () => {
@@ -23,22 +20,22 @@ describe('JobDetailScreen component', () => {
   });
 
   it('should have a LEFT button config of going to Job List Page', () => {
-    JobDetailScreenButtons.LEFT();
-    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/jobpost');
+    componentWrapper.instance().buttonActions.LEFT();
+    expect(ButtonAction.goToPage).toHaveBeenCalledWith({ pathname: '/jobpost', state: { jobId: 1 } });
   });
 
   it('should have a RIGHT button config of going to Counter page', () => {
-    JobDetailScreenButtons.RIGHT();
+    componentWrapper.instance().buttonActions.RIGHT();
     expect(ButtonAction.goToPage).toHaveBeenCalledWith('/counter');
   });
 
   it('should have a TOP button config of scrolling up', () => {
-    JobDetailScreenButtons.TOP();
+    componentWrapper.instance().buttonActions.TOP();
     expect(ButtonAction.scrollUp).toHaveBeenCalled();
   });
 
   it('should have a BOTTOM button config of scrolling down', () => {
-    JobDetailScreenButtons.BOTTOM();
+    componentWrapper.instance().buttonActions.BOTTOM();
     expect(ButtonAction.goToPage).toHaveBeenCalled();
   });
 });

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {
-  number,
-} from 'prop-types';
+import PropTypes from 'prop-types';
 import jobs from '../../data/jobdb.json';
 import WithButtonConfigs from '../../../framework/containers/WithButtonConfigs';
 import ButtonAction from '../../../framework/util/ButtonAction';
@@ -13,6 +11,17 @@ export class JobDetailScreen extends Component {
     super(props);
     this.state = { jobId: props.jobId };
   }
+
+  componentDidMount() {
+    this.props.remapButtons(this.buttonActions);
+  }
+
+  buttonActions = {
+    LEFT: () => ButtonAction.goToPage({ pathname: '/jobpost', state: { jobId: this.state.jobId } }),
+    RIGHT: () => ButtonAction.goToPage('/counter'),
+    TOP: () => ButtonAction.scrollUp(),
+    BOTTOM: () => ButtonAction.scrollDown(),
+  };
 
   render() {
     return (
@@ -32,18 +41,12 @@ export class JobDetailScreen extends Component {
 }
 
 JobDetailScreen.propTypes = {
-  jobId: number,
+  remapButtons: PropTypes.func.isRequired,
+  jobId: PropTypes.number,
 };
 
 JobDetailScreen.defaultProps = {
   jobId: 1,
 };
 
-export const JobDetailScreenButtons = {
-  LEFT: () => ButtonAction.goToPage('/jobpost'),
-  RIGHT: () => ButtonAction.goToPage('/counter'),
-  TOP: () => ButtonAction.scrollUp(),
-  BOTTOM: () => ButtonAction.scrollDown(),
-};
-
-export default WithButtonConfigs(JobDetailScreen, JobDetailScreenButtons);
+export default WithButtonConfigs(JobDetailScreen);

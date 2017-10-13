@@ -6,7 +6,8 @@
     "Company": "ThoughtWorks",
     "Tags": ["Junior", "Web", "Developer", "IT", "React"],
     "Description": "This job requires .Net and MySQL experience.",
-    "Salary": 70000
+    "Salary": 70000,
+    "Status": ""
   },
   {
     "JobId": "2",
@@ -15,7 +16,8 @@
     "Company": "web company Y",
     "Tags": ["Junior", "Web", "Developer", "IT"],
     "Description": "We offer great working environment here.",
-    "Salary": 60000
+    "Salary": 60000,
+    "Status": ""
   },
   {
     "JobId": "3",
@@ -24,7 +26,8 @@
     "Company": "Software Company X",
     "Tags": ["Junior", "Frontend", "Developer", "IT"],
     "Description": "At leat one-year experience required.",
-    "Salary": 50000
+    "Salary": 50000,
+    "Status": ""
   },
   {
     "JobId": "4",
@@ -33,7 +36,8 @@
     "Company": "IT Company Z",
     "Tags": ["Senior", "Web", "Developer", "IT"],
     "Description": "Leadership is required.",
-    "Salary": 100000
+    "Salary": 100000,
+    "Status": ""
   },
   {
     "JobId": "5",
@@ -42,7 +46,8 @@
     "Company": "Company1",
     "Tags": ["Junior", "Web", "Developer", "IT"],
     "Description": "We need you to be on board as soon as possible.",
-    "Salary": 50000
+    "Salary": 50000,
+    "Status": ""
   },
   {
     "JobId": "6",
@@ -51,7 +56,8 @@
     "Company": "Company1",
     "Tags": ["Junior", "Web", "Developer", "IT"],
     "Description": "Casual position.",
-    "Salary": 50000
+    "Salary": 50000,
+    "Status": ""
   },
   {
     "JobId": "7",
@@ -60,6 +66,7 @@
     "Company": "Company1",
     "Tags": ["Junior", "Web", "Developer", "IT"],
     "Description": "Fulltime/Part-time",
-    "Salary": 50000
+    "Salary": 50000,
+    "Status": ""
   }
 ]

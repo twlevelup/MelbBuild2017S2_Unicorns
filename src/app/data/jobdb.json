@@ -17,7 +17,7 @@
     "Tags": ["Junior", "Web", "Developer", "IT"],
     "Description": "We offer great working environment here.",
     "Salary": 60000,
-    "Status": ""
+    "Status": "Saved"
   },
   {
     "JobId": "3",
@@ -27,7 +27,7 @@
     "Tags": ["Junior", "Frontend", "Developer", "IT"],
     "Description": "At leat one-year experience required.",
     "Salary": 50000,
-    "Status": ""
+    "Status": "Applied"
   },
   {
     "JobId": "4",
@@ -37,7 +37,7 @@
     "Tags": ["Senior", "Web", "Developer", "IT"],
     "Description": "Leadership is required.",
     "Salary": 100000,
-    "Status": ""
+    "Status": "Saved"
   },
   {
     "JobId": "5",

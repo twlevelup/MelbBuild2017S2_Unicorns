@@ -5,7 +5,7 @@
 #home-btn {
   text-align: center;
   padding-top: 23%;
-  color: blue;
+  color: orange;
 }
 
 #next-btn {
@@ -13,14 +13,14 @@
   padding: 75% 0 0 95%;
   transform: rotate(-90deg);
   float: left;
-  color: blue;
+  color: orange;
 }
 
 #previous-btn {
   position: absolute;
   margin-top: -18%;
   transform: rotate(90deg);
-  color: blue;
+  color: orange;
   transform-origin: left top 0;
 
 }

@@ -18,7 +18,7 @@ export class JobDetailScreen extends Component {
 
   buttonActions = {
     LEFT: () => ButtonAction.goToPage({ pathname: '/jobpost', state: { jobId: this.state.jobId } }),
-    RIGHT: () => ButtonAction.goToPage('/counter'),
+    RIGHT: () => ButtonAction.goToPage('/history'),
     TOP: () => ButtonAction.scrollUp(),
     BOTTOM: () => ButtonAction.scrollDown(),
   };

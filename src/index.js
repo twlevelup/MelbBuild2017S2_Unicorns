@@ -10,6 +10,8 @@ import contacts from './app/data/contacts.json';
 import WatchApp from './framework';
 import JobPostScreen from './app/pages/JobPostScreen/JobPostScreen';
 import userdb from './app/data/userdb.json';
+import HistoryScreenComponent from './app/pages/HistoryScreen/HistoryScreen';
+import historys from './app/data/jobdb.json';
 
 const pages = [
   { path: '/', Component: HomeScreen, props: { userdb } },
@@ -18,6 +20,7 @@ const pages = [
   { path: '/notfound', Component: NotFoundScreen },
   { path: '/jobpost', Component: JobPostScreen },
   { path: '/job_detail', Component: JobInfoScreen },
+  { path: '/history', Component: HistoryScreenComponent, props: { historys } },
 ];
 
 ReactDOM.render(

@@ -32,7 +32,7 @@ describe('HomeScreenComponent component', () => {
 
   test('it should have a BOTTOM button config of scrolling page down', () => {
     HomeScreenButtons.BOTTOM();
-    expect(ButtonAction.scrollDown).toHaveBeenCalled();
+    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/history');
   });
   test('it should have a user name', () => {
     expect(homeScreenComponent).toContainReact(<h2>Davis</h2>);

@@ -26,7 +26,7 @@ describe('JobDetailScreen component', () => {
 
   it('should have a RIGHT button config of going to Counter page', () => {
     componentWrapper.instance().buttonActions.RIGHT();
-    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/counter');
+    expect(ButtonAction.goToPage).toHaveBeenCalledWith('/history');
   });
 
   it('should have a TOP button config of scrolling up', () => {

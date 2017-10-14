@@ -35,7 +35,7 @@ export const HomeScreenButtons = {
   LEFT: () => ButtonAction.goToPage({ pathname: '/counter', state: { number: 5 } }),
   RIGHT: () => ButtonAction.goToPage('/jobpost'),
   TOP: () => ButtonAction.scrollUp(),
-  BOTTOM: () => ButtonAction.scrollDown(),
+  BOTTOM: () => ButtonAction.goToPage('/history'),
 };
 
 export default WithButtonConfigs(HomeScreenComponent, HomeScreenButtons);

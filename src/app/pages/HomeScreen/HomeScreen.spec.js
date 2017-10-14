@@ -45,11 +45,4 @@ describe('HomeScreenComponent component', () => {
     expect(homeScreenComponent).toContainReact(<p>Tags:
           {userdb[0].Tags.join(', ') }</p>);
   });
-  test('it should have a progress bar', () => {
-    expect(homeScreenComponent).toContainReact(<div className='progress'>
-      <div className='progress-bar progress-bar-success' style={ { width: '35%' } } />
-      <div className='progress-bar progress-bar-warning' style={ { width: '20%' } } />
-      <div className='progress-bar progress-bar-danger' style={ { width: '10%' } } />
-    </div>);
-  });
 });

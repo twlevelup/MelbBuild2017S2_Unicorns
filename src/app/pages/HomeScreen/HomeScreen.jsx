@@ -18,11 +18,6 @@ export const HomeScreenComponent = ({ userdb }) => {
         <p>Tags:
           {userdb[0].Tags.join(', ') }
         </p>
-        <div className='progress'>
-          <div className='progress-bar progress-bar-success' style={ { width: '35%' } } />
-          <div className='progress-bar progress-bar-warning' style={ { width: '20%' } } />
-          <div className='progress-bar progress-bar-danger' style={ { width: '10%' } } />
-        </div>
       </div>
     </div>
   );
